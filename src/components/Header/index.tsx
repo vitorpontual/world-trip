@@ -4,8 +4,10 @@ import { RiArrowLeftSLine } from 'react-icons/ri';
 
 
 export default function Header() {
-  const asPath = useRouter()
+  const {asPath} = useRouter()
   const notHomePage = asPath !== '/'
+  console.log(notHomePage)
+
   return (
     <Flex
       as='header'
@@ -27,7 +29,7 @@ export default function Header() {
       >
         {notHomePage && (
           <Link href="/">
-            <a>1
+            <a>
               <Icon as={RiArrowLeftSLine} fontSize={[20, 40]} justifySelf="start" />
             </a>
           </Link>
