@@ -28,7 +28,7 @@ export default function Header() {
         justifyContent='center'
       >
         {notHomePage && (
-          <Link href="/">
+          <Link href="/" gridColumn='1'>
             <a>
               <Icon as={RiArrowLeftSLine} fontSize={[20, 40]} justifySelf="start" />
             </a>
