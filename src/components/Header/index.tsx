@@ -1,4 +1,4 @@
-import { Flex, Grid, Image, Link, Icon } from '@chakra-ui/react'
+import { Box, Flex, Grid, Image, Link, Icon } from '@chakra-ui/react'
 import { useRouter } from 'next/router';
 import { RiArrowLeftSLine } from 'react-icons/ri';
 
@@ -28,11 +28,14 @@ export default function Header() {
         justifyContent='center'
       >
         {notHomePage && (
-          <Link href="/" gridColumn='1'>
-            <a>
-              <Icon as={RiArrowLeftSLine} fontSize={[20, 40]} justifySelf="start" />
-            </a>
-          </Link>
+          <Box>
+
+            <Link href="/" gridColumn='1'>
+              <a>
+                <Icon as={RiArrowLeftSLine} fontSize={[20, 40]} justifySelf="start" />
+              </a>
+            </Link>
+          </Box>
         )}
         <Image
           w={["81px", "184px"]}
